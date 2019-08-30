@@ -1,0 +1,45 @@
+Story1
+查询所有停车男孩
+Method : GET
+URL :/parkingBoys
+Request body :
+Response body :[{"parkingBoyID":1…},{"parkingBoyID":2…}]
+Response code : 200,500
+
+添加停车男孩
+Method : post
+URL : /parkingBoys
+Request body :  {"parkingBoyID":1…}
+Response body :
+Response code : 201,500
+
+Story2
+查询所有停车场
+Method : get
+URL : /parkingLots
+Request body :
+Response body :[{"parkingLotID":1,"capcacity":10,"availablePositionCount":2…},…]
+Response code : 200,500
+
+创建停车场
+Method : post
+URL : /parkingLots
+Request body :   {"parkingLotID":1,"capcacity":10}
+Response body :
+Response code : 200,500
+
+
+Story3
+关联停车场与停车男孩
+Method : post
+URL : /parkingBoys/parkingLots
+Request body :   {"parkingBoyID":1,"parkingLotsID":[1,2,3]}
+Response body :
+Response code : 201,500
+
+查询停车男孩和他管理的停车场
+Method : get
+URL : /parkingBoys/parkingLots
+Request body :
+Response body :[{"parkingBoyID":1,"parkingLotsID":[1,2..]},{"parkingBoyID":1,"parkingLotsID":[1,2..]}]
+Response code : 200,500
