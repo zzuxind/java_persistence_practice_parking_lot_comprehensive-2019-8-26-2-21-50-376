@@ -9,7 +9,7 @@ Response code : 200,500
 添加停车男孩
 Method : post
 URL : /parkingBoys
-Request body :  {"parkingBoyID":1…}
+Request body :   {"parkingBoyID":1…}
 Response body :
 Response code : 201,500
 
@@ -32,10 +32,18 @@ Response code : 200,500
 Story3
 关联停车场与停车男孩
 Method : post
-URL : /parkingBoys/parkingLots
+URL : /parkingBoys/{parkingboyID}/parkingLots/{parkinglotID}
 Request body :   {"parkingBoyID":1,"parkingLotsID":[1,2,3]}
 Response body :
 Response code : 201,500
+
+根据男孩儿id查询他管理的停车场
+Method : get
+URL : /parkingBoys/{parkingboyID}/parkinglots
+Request body :
+Response body :{"parkinglotid":["100","101"]}
+Response code : 200,500
+
 
 查询停车男孩和他管理的停车场
 Method : get

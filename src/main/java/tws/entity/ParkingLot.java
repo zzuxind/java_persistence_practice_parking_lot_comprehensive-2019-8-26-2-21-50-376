@@ -14,29 +14,32 @@ public class ParkingLot {
         this.avaliablePositionCount = avaliablePositionCount;
     }
 
-
-    public String getParkingboyid() {
+    public String getParkingboyid()
+    {
         return parkingboyid;
     }
 
     public void setParkingboyid(String parkingboyid) {
+
         this.parkingboyid = parkingboyid;
     }
-
 
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
+
         this.id = id;
     }
 
     public int getCapacity() {
+
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(int capacity)
+    {
         this.capacity = capacity;
     }
 
