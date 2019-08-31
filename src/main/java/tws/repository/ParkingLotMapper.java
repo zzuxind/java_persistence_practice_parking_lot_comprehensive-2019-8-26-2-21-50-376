@@ -10,4 +10,8 @@ import java.util.List;
 public interface ParkingLotMapper {
     List<ParkingLot> getParkingLots();
     void creatParkingLot(@Param("parkingLot") ParkingLot parkingLot);
+
+    int addParkinglotToParkingboy(@Param("parkingboyid") String parkingboyID, @Param("parkinglotid") String parkinglotID);
+
+    List<ParkingLot> getParkingLotsByParkingBoyID(@Param("parkingboyid") String parkingboyID);
 }

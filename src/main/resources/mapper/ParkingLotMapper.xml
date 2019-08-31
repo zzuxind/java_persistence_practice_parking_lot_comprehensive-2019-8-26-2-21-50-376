@@ -5,10 +5,20 @@
     <select id="getParkingLots" resultType="tws.entity.ParkingLot">
         select * from parking_lot
     </select>
+    <select id="getParkingLotsByParkingBoyID" resultType="tws.entity.ParkingLot">
+        select * from parking_lot where parkingboyid=#{parkingboyid}
+    </select>
 
     <insert id="creatParkingLot">
         insert into parking_lot (id,capacity)
         values
         (#{parkingLot.id},#{parkingLot.capacity})
     </insert>
+
+    <update id="addParkinglotToParkingboy">
+        update parking_lot set parkingboyid=#{parkingboyid}
+        where id=#{parkinglotid}
+    </update>
+
+
 </mapper>

@@ -12,4 +12,6 @@ public interface ParkingBoyMapper {
     public List<ParkingBoy> getParkingBoys();
 
     public void creatParkingBoy(@Param("parkingBoy") ParkingBoy parkingBoy);
+
+
 }

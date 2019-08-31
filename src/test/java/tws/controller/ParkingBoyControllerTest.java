@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -55,4 +57,34 @@ public class ParkingBoyControllerTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(status().isCreated());
     }
+
+    @Test
+    public void should_return_200_status_when_add_parkinglot_to_parkingboy() throws Exception {
+
+        MockHttpServletRequestBuilder input = put("/parkingboys/1/parkinglots/100");
+        //When
+        ResultActions result = mockMvc.perform(input);
+        //Then
+        result
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(status().isOk())
+                .andExpect(content().string("1"));
+
+    }
+
+    @Test
+    public void should_return_ok_and_list_when_query_parkinglots_by_parkingboyid() throws Exception {
+        //Given
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/parkingboys/2/parkinglots");
+        //When
+        ResultActions performResult = mockMvc.perform(requestBuilder);
+        //Then
+        performResult
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(status().isOk())
+        .andExpect(content().string("[{\"id\":\"101\",\"capacity\":2,\"parkingboyid\":\"2\"}]"));
+    }
+
+
+
 }
