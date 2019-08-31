@@ -14,7 +14,7 @@ import java.util.List;
 public class ParkingboyService {
     @Autowired
     private ParkingBoyMapper parkingBoyMapper;
-    DozerBeanMapper dozerBeanMapper=new DozerBeanMapper();
+    private DozerBeanMapper dozerBeanMapper=new DozerBeanMapper();
 
     public List<ParkingBoyDTO> getParkingBoys() {
         List<ParkingBoyDTO> parkingBoyDTOList=new ArrayList<>();

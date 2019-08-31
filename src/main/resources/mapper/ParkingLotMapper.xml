@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tws.repository.ParkingLotMapper">
+
+    <select id="getParkingLots" resultType="tws.entity.ParkingLot">
+        select * from parking_lot
+    </select>
+
+    <insert id="creatParkingLot">
+        insert into parking_lot (parkinglot_id,capacity)
+        values
+        (#{parkingLot.id},#{parkingLot.capacity})
+    </insert>
+</mapper>
