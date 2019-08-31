@@ -9,10 +9,13 @@ logging:
         web: DEBUG
 spring:
   datasource:
-    url:  jdbc:h2:mem:tws_persistence_db
+    url: jdbc:h2:file:./h2-db/h2;MODE=Oracle
   h2:
     console:
       enabled: true
+  flyway:
+    baseline-on-migrate: true
+    locations: "classpath:/db/migration"
 #mybatis:
 #  mapper-locations: "classpath:mapper/*Mapper.xml"
 mybatis:
