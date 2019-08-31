@@ -4,6 +4,16 @@ public class ParkingLot {
     private String id;
     private int capacity;
     private String parkingboyid;
+    private int avaliablePositionCount;
+
+    public int getAvaliablePositionCount() {
+        return avaliablePositionCount;
+    }
+
+    public void setAvaliablePositionCount(int avaliablePositionCount) {
+        this.avaliablePositionCount = avaliablePositionCount;
+    }
+
 
     public String getParkingboyid() {
         return parkingboyid;

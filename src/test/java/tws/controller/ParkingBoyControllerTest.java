@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -85,6 +86,17 @@ public class ParkingBoyControllerTest {
         .andExpect(content().string("[{\"id\":\"101\",\"capacity\":2,\"parkingboyid\":\"2\"}]"));
     }
 
+    @Test
+    public void should_return_ok_and_list_when_query_parkinglots() throws Exception {
+        //Given
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/parkingboys/parkinglots");
+        //When
+        ResultActions performResult = mockMvc.perform(requestBuilder);
+        //Then
+        performResult
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(status().isOk());
+    }
 
 
 }
