@@ -9,6 +9,7 @@ import tws.repository.ParkingBoyMapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ParkingboyService {
@@ -27,6 +28,7 @@ public class ParkingboyService {
     }
 
     public void creatParkingBoy(ParkingBoy parkingBoy) {
+        parkingBoy.setId(UUID.randomUUID().toString());
         parkingBoyMapper.creatParkingBoy(parkingBoy);
     }
 }

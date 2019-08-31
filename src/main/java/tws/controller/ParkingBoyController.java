@@ -27,6 +27,10 @@ public class ParkingBoyController {
         parkingboyService.creatParkingBoy(parkingBoy);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+//    @PostMapping{"/{parkingboyID}/parkinglots/{parkinglotID}"}
+//    public ResponseEntity addParkinglotToParkingboy(@PathVariable String parkingboyID,@PathVariable String parkinglotID){
+//
+//    }
 
 
 }

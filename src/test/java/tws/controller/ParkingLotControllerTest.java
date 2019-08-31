@@ -44,8 +44,6 @@ public class ParkingLotControllerTest {
     public void should_return_201_status_when_create_parkingLot() throws Exception {
         //Given
         HashMap map=new HashMap();
-        String id= UUID.randomUUID().toString();
-        map.put("id",id);
         map.put("capacity",10);
 
         String postString = objectMapper.writeValueAsString(map);

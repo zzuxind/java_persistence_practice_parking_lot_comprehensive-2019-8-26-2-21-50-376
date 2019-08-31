@@ -11,6 +11,7 @@ import tws.repository.ParkingLotMapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ParkingLotService {
@@ -28,6 +29,7 @@ public class ParkingLotService {
     }
 
     public void creatParkingLot(ParkingLot parkingLot){
+        parkingLot.setId(UUID.randomUUID().toString());
         parkingLotMapper.creatParkingLot(parkingLot);
     }
 }

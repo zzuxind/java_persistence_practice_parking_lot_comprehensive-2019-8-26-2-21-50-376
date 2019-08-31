@@ -7,7 +7,7 @@
     </select>
 
     <insert id="creatParkingLot">
-        insert into parking_lot (parkinglot_id,capacity)
+        insert into parking_lot (id,capacity)
         values
         (#{parkingLot.id},#{parkingLot.capacity})
     </insert>

@@ -6,9 +6,7 @@
         select * from parking_boy
     </select>
 
-<!--    <select id="getEmployeeByID" resultType="tws.entity.Employee">-->
-<!--        select * from employee where id=#{employeeID}-->
-<!--    </select>-->
+
 
     <insert id="creatParkingBoy">
         insert into parking_boy
@@ -16,12 +14,5 @@
         (#{parkingBoy.id})
     </insert>
 
-<!--    <update id="updateEmployeeByID">-->
-<!--        update employee set name=#{employee.name},age=#{employee.age}-->
-<!--        where id=#{id}-->
-<!--    </update>-->
 
-<!--    <delete id="deleteEmployeeByID">-->
-<!--        delete from employee where id = #{id}-->
-<!--    </delete>-->
 </mapper>

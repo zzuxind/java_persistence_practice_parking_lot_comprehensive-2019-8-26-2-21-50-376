@@ -44,14 +44,10 @@ public class ParkingBoyControllerTest {
 
     @Test
     public void should_return_201_status_when_create_parkingBoy() throws Exception {
-        //Given
-        HashMap map=new HashMap();
-        String id=UUID.randomUUID().toString();
-        map.put("id",id);
-        String postString = objectMapper.writeValueAsString(map);
+
         MockHttpServletRequestBuilder input = post("/parkingboys")
                                             .contentType(MediaType.APPLICATION_JSON)
-                                            .content(postString);
+                                            .content("{}");
         //When
         ResultActions result = mockMvc.perform(input);
         //Then
