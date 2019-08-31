@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tws.repository.ParkingBoyMapper">
+
     <select id="getParkingBoys" resultType="tws.entity.ParkingBoy">
         select * from parking_boy
     </select>
@@ -9,11 +10,11 @@
 <!--        select * from employee where id=#{employeeID}-->
 <!--    </select>-->
 
-<!--    <insert id="insert">-->
-<!--        insert into employee-->
-<!--        values-->
-<!--        (#{employee.id},#{employee.name},#{employee.age})-->
-<!--    </insert>-->
+    <insert id="creatParkingBoy">
+        insert into parking_boy
+        values
+        (#{parkingBoy.id})
+    </insert>
 
 <!--    <update id="updateEmployeeByID">-->
 <!--        update employee set name=#{employee.name},age=#{employee.age}-->

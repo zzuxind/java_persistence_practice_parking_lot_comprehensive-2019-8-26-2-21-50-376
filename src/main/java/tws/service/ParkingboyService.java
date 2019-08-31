@@ -25,4 +25,8 @@ public class ParkingboyService {
         }
         return parkingBoyDTOList;
     }
+
+    public void creatParkingBoy(ParkingBoy parkingBoy) {
+        parkingBoyMapper.creatParkingBoy(parkingBoy);
+    }
 }
