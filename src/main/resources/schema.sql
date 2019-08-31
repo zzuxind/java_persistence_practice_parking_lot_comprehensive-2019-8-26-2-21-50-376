@@ -12,3 +12,12 @@ PRIMARY KEY (`parkinglot_id`),
 FOREIGN KEY (`parkingboy_id`) REFERENCES `parking_boy` (`parkingboy_id`)
 )
 ;
+
+-- INSERT INTO parking_boy (parkingboy_id) VALUES ('1')
+-- INSERT INTO parking_boy VALUES ('2')
+--
+-- INSERT INTO parking_lot (parkinglot_id,capacity,parkingboy_id) VALUES ('001',10,'1');
+-- INSERT INTO parking_lot (parkinglot_id,capacity,parkingboy_id) VALUES ('002',10,'1');
+-- INSERT INTO parking_lot (parkinglot_id,capacity,parkingboy_id) VALUES ('003',10,'2');
+-- commit;
+
